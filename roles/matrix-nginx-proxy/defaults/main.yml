@@ -50,6 +50,11 @@ matrix_nginx_proxy_container_extra_arguments: []
 # - services are served directly from the HTTP vhost
 matrix_nginx_proxy_https_enabled: true
 
+# Controls whether matrix-nginx-proxy accepts the PROXY protocol.
+#
+# This can be helpful if you have upstream proxies.
+matrix_nginx_proxy_enable_proxy_protocol: false
+
 # Controls whether matrix-nginx-proxy trusts an upstream server's X-Forwarded-Proto header
 #
 # Required if you disable HTTPS for the container (see `matrix_nginx_proxy_https_enabled`) and have an upstream server handle it instead.
